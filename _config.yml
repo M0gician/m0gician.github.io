@@ -5,7 +5,7 @@
 title: blank # the website title (if blank, full name will be used instead)
 first_name: Tianyi
 last_name: Yang
-email: m0g1c14n [at] gmail [dot] com
+email: m0g1c14n@gmail.com
 description: > # the ">" symbol means to ignore newlines until "footer_text:"
   I break everything language model related. Training, inference, optimization, and deployment.
 footer_text: >

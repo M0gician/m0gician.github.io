@@ -36,10 +36,10 @@
   "projects": [
     {
       "name": "Unsupervised Mass Product Property Extraction",
-      "summary": "Develope a unsupervised pipeline that generates formatted properties for billions of listed goods on Pinduoduo & Temu.",
+      "summary": "Develop a unsupervised pipeline that generates formatted properties for billions of listed goods on Pinduoduo & Temu.",
       "highlights": [
         "Developed a pipeline that converts property templates into finite state machines to guide LLM's decoding, ensuring legal JSON output for all LLM generated product properties",
-        "mplemented a unsupervised data cleaning process to filter out duplicates and low quality product properties.",
+        "Implemented a unsupervised data cleaning process to filter out duplicates and low quality product properties.",
         "Built a keyword and feature generation process to support billions of products.",
         "Designed a holistic evaluation pipeline for product properties, including format validation, keyword matching, and semantic similarity."
       ],
@@ -87,7 +87,7 @@
       "highlights": [
         "Designed and developed machine learning algorithms with high safety constraints using <a href='https://seldonian.cs.umass.edu/Tutorials/overview/'>Seldonian Framework</a>.",
         "Derived concentration inequalities and implemented various Importance Sampling estimators for high confidence policy improvements.",
-        "Developed a library for Seldonian Framework with <tt>numpy</tt> and <tt>numba</tt> optimizations.Developed a library for Seldonian Framework with <tt>numpy</tt> and <tt>numba</tt> optimizations.",
+        "Developed a library for Seldonian Framework with <tt>Numpy</tt> and <tt>Numba</tt> optimizations.",
         "<a href='https://github.com/M0gician/lightRaven'>Opensourced on GitHub with full documentation.</a>"
       ],
       "startDate": "2021-06",
@@ -128,8 +128,8 @@
       "endDate": "2018-09",
       "summary": "Research RL-based recommendation systems for Alibaba's online second-hand market <it>Xianyu</it>.",
       "highlights": [
-        "Constract the homepage Merchant Feed in <it>Xianyu</it> to a classic Contextual Bandit problem.",
-        "Implement a recommendation system based on a modified Linear UCB algorithm which utilizes both browsing features and click features."
+        "Built the homepage Merchant Feed in <it>Xianyu</it> to a classic Contextual Bandit problem.",
+        "Implemented a recommendation system based on a modified Linear UCB algorithm which utilizes both browsing features and click features."
       ]
     }
   ],
