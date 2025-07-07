@@ -8,30 +8,22 @@ categories: reinforcement-learning
 related_posts: false
 ---
 
-<style>
-.definition {
-  background-color: #e7f3fe;
-  border-left: 6px solid #2196F3;
-  padding: 10px;
-  margin-bottom: 15px;
-}
-</style>
 
 ## MDP (Markov Decision Process)
 
 We usually define an MDP as a tuple $$(\mathcal{S}, \mathcal{A}, p, R, \gamma)$$.
 
-<div class="definition" markdown="1">
+<div class="callout" markdown="1">
 **State Set ($$\mathcal{S}$$):** The set of all possible states of the environment.
 * The state at time $$t$$, $$S_t$$, always takes values in $$\mathcal{S}$$.
 </div>
 
-<div class="definition" markdown="1">
+<div class="callout" markdown="1">
 **Action Set ($$\mathcal{A}$$):** The set of all possible actions the agent can take.
 * The action at time $$t$$, $$A_t$$, always takes values in $$\mathcal{A}$$.
 </div>
 
-<div class="definition" markdown="1">
+<div class="callout" markdown="1">
 **Transition Function ($$p$$):** Describes how the state of the environment changes.
 
 $$
@@ -47,7 +39,7 @@ $$
 A transition function is deterministic if $$p(s,a,s’) \in \{0,1\}$$ for all s, a, and s’
 </div>
 
-<div class="definition" markdown="1">
+<div class="callout" markdown="1">
 $$d_R$$ describes how rewards are generated.
 
 $$
@@ -56,7 +48,7 @@ $$
 
 </div>
 
-<div class="definition" markdown="1">
+<div class="callout" markdown="1">
 **Reward Function ($$R$$):** A function implicitly defined by the reward distribution $$d_R$$, which describes how rewards are generated.
 
 $$
@@ -69,7 +61,7 @@ $$
 
 </div>
 
-<div class="definition" markdown="1">
+<div class="callout" markdown="1">
 **Initial State Distribution ($$d_0$$):**
 
 $$
@@ -82,7 +74,7 @@ $$
 
 </div>
 
-<div class="definition" markdown="1">
+<div class="callout" markdown="1">
 **Discount Factor ($$\gamma$$):** A parameter in $$[0,1]$$ that discounts future rewards.
 </div>
 
@@ -95,7 +87,7 @@ The goal is to find an optimal policy $$\pi^*$$ that maximizes the expected tota
 -   $$G^i$$ denotes the return of the i-th episode.
 -   $$R^i_t$$ denotes the reward at time $$t$$ during episode $$i$$.
 
-<div class="definition" markdown="1">
+<div class="callout" markdown="1">
 **Objective function ($$J$$):**
 
 $$
@@ -111,7 +103,7 @@ $$
 
 </div>
 
-<div class="definition" markdown="1">
+<div class="callout" markdown="1">
 **Optimal Policy ($$\pi^*$$):**
 
 $$
@@ -131,7 +123,7 @@ $$
 
 ### Properties
 
-<div class="definition" markdown="1">
+<div class="callout" markdown="1">
 **Horizon ($$L$$):** The smallest integer $$L$$ such that for all $$t \geq L$$, the probability of being in a terminal state $$s_\infty$$ is 1.
 
 $$
@@ -142,7 +134,7 @@ $$
 - The MDP is **infinite horizon** (continuous) when $$L = \infty$$.
 </div>
 
-<div class="definition" markdown="1">
+<div class="callout" markdown="1">
 **Markov Property:** A property of the state representation. It assumes that the future is independent of the past given the present.
 * $$S_{t+1}$$ is conditionally independent of the history $$H_{t-1}$$ given the current state $$S_t$$.
 </div>
@@ -151,7 +143,7 @@ $$
 
 ## Policy
 
-<div class="definition" markdown="1">
+<div class="callout" markdown="1">
 A **policy** is a decision rule—a way that the agent can select actions.
 
 $$
@@ -168,7 +160,7 @@ $$
 
 ## Value Functions
 
-<div class="definition" markdown="1">
+<div class="callout" markdown="1">
 **State-Value Function ($$v^\pi$$)**
 
 The state-value function $$v^\pi : \mathcal{S} \rightarrow \mathbb{R}$$ measures the expected return starting from a state $$s$$ and following policy $$\pi$$.
@@ -182,7 +174,7 @@ $$
 
 </div>
 
-<div class="definition" markdown="1">
+<div class="callout" markdown="1">
 **Action-Value Function (Q-function, $$q^\pi$$)**
 
 The action-value function $$q^\pi : \mathcal{S} \times \mathcal{A} \rightarrow \mathbb{R}$$ measures the expected return starting from state $$s$$, taking action $$a$$, and then following policy $$\pi$$.
@@ -197,7 +189,7 @@ $$
 
 ### Bellman Equations
 
-<div class="definition" markdown="1">
+<div class="callout" markdown="1">
 **Bellman Equation for the State-Value Function ($$v^\pi$$)**
 
 $$
@@ -211,7 +203,7 @@ $$
 - The optimal state-value function, $$v^*$$, is unique—all optimal policies share the same state-value function.
 </div>
 
-<div class="definition" markdown="1">
+<div class="callout" markdown="1">
 **Bellman Equation for the Action-Value Function ($$q^\pi$$)**
 
 $$
@@ -226,7 +218,7 @@ $$
 1.  If a policy $$\pi$$ satisfies the Bellman optimality equation, then $$\pi$$ is an optimal policy.
 2.  If the state and action sets are finite, rewards are bounded, and $$\gamma < 1$$, then there exists a policy $$\pi$$ that satisfies the Bellman optimality equation.
 
-<div class="definition" markdown="1">
+<div class="callout" markdown="1">
 **Bellman Optimality Equation for $$v^*$$**
 
 A policy $$\pi$$ satisfies the Bellman optimality equation if for all states $$s\in\mathcal{S}$$:
@@ -237,7 +229,7 @@ $$
 
 </div>
 
-<div class="definition" markdown="1">
+<div class="callout" markdown="1">
 **Bellman Optimality Equation for $$q^*$$**
 
 $$
@@ -254,7 +246,7 @@ Policy iteration is an algorithm that finds an optimal policy by alternating bet
 
 -   Even though policy evaluation using dynamic programming is guaranteed to converge to $$v^\pi$$, it is not guaranteed to reach $$v^\pi$$ in a finite amount of computation.
 
-<div class="definition" markdown="1">
+<div class="callout" markdown="1">
 **Policy Improvement Theorem**
 
 For any policy $$\pi$$, if $$\pi’$$ is a deterministic policy such that $$\forall s \in \mathcal{S}$$:
@@ -266,7 +258,7 @@ $$
 then $$\pi’ \geq \pi$$.
 </div>
 
-<div class="definition" markdown="1">
+<div class="callout" markdown="1">
 **Policy Improvement Theorem for Stochastic Policies**
 
 For any policy $$\pi$$, if $$\pi’$$ satisfies:
@@ -284,13 +276,13 @@ for all $$s \in \mathcal{S}$$, then $$\pi' \geq \pi$$.
 
 Value iteration is an algorithm that finds the optimal state-value function by iteratively applying the Bellman optimality update.
 
-<div class="definition" markdown="1">
+<div class="callout" markdown="1">
 **Banach Fixed-Point Theorem**
 
 If $$f$$ is a contraction mapping on a non-empty complete normed vector space, then $$f$$ has a unique fixed point, $$x^*$$, and the sequence defined by $$x_{k+1} = f(x_k)$$, with $$x_0$$ chosen arbitrarily, converges to $$x^*$$.
 </div>
 
-<div class="definition" markdown="1">
+<div class="callout" markdown="1">
 **Bellman Operator is a Contraction Mapping**
 
 The Bellman operator is a contraction mapping on $$\mathbb{R}^{\vert\mathcal{S}\vert}$$ with distance metric $$d(v,v’) := \max_{s\in\mathcal{S}}\vert v(s)-v’(s) \vert$$ if $$\gamma < 1$$. 
@@ -303,7 +295,7 @@ The Bellman operator is a contraction mapping on $$\mathbb{R}^{\vert\mathcal{S}\
 
 ## Law of Large Numbers
 
-<div class="definition" markdown="1">
+<div class="callout" markdown="1">
 **Khintchine's Strong Law of Large Numbers**
 
 Let $$\{X_i\}_{i=1}^{\infty}$$ be **independent and identically distributed (i.i.d.) random variables**. Then the sequence of sample averages $$(\frac{1}{n} \sum_{i=1}^{n} X_i)_{n=1}^\infty$$ converges **almost surely** to the expected value $$\mathbf{E}[X_1]$$.
@@ -312,7 +304,7 @@ i.e., $$\displaystyle \frac{1}{n}\sum_{i=1}^{\infty} X_i \overset{a.s.}{\rightar
 
 </div>
 
-<div class="definition" markdown="1">
+<div class="callout" markdown="1">
 **Kolmogorov's Strong Law of Large Numbers**
 
 Let $$\{X_i\}^\infty_{i=1}$$ be **independent (not necessarily identically distributed) random variables**. If all $$X_i$$ have the **same mean and bounded variance**, then the sequence of sample averages $$(\frac{1}{n}\sum_{i=1}^n X_i)^\infty_{n=1}$$ converges almost surely to $$\mathbf{E}[X_1]$$.
