@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Reinforcement Learning—Mathematical Foundations
+title: Reinforcement Learning - Mathematical Foundations
 date: 2025-07-04 11:12:00-0800
 description: A very, very, very large chunk of math
 tags: RL math

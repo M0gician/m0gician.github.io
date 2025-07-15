@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 强化学习—数学基础
+title: 强化学习 - 数学基础
 date: 2025-07-04 11:12:00-0800
 description: 超大一坨数学公式
 tags: RL math
