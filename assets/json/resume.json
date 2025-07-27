@@ -35,37 +35,61 @@
   ],
   "projects": [
     {
-      "name": "Unsupervised Mass Product Property Extraction",
-      "summary": "Develop a unsupervised pipeline that generates formatted properties for billions of listed goods on Pinduoduo & Temu.",
+      "name": "Self-Bootstrap LLM Reasoning Behavior",
+      "summary": "Develop a scalable, unsupervised training pipeline for fine-grained LLM reasoning behavior tuning.",
       "highlights": [
-        "Developed a pipeline that converts property templates into finite state machines to guide LLM's decoding, ensuring legal JSON output for all LLM generated product properties",
-        "Implemented a unsupervised data cleaning process to filter out duplicates and low quality product properties.",
-        "Built a keyword and feature generation process to support billions of products.",
-        "Designed a holistic evaluation pipeline for product properties, including format validation, keyword matching, and semantic similarity."
+        "Developed an unsupervised pipeline using LLM-generated task trees to create self-correcting training data for math and puzzle-solving.",
+        "Fine-tuned a Qwen2.5 7B base model on the generated dataset to elicit structured, backtracking reasoning.",
+        "Used RL with custom reward functions for fine-grained control of the model's reasoning, improving efficiency and explainability.",
+        "Achieved 0.79 on MATH-500, 0.52 on AMC, and 0.20 on AIME24, with generalized reasoning behavior and improved self-correction on downstream tasks."
       ],
-      "startDate": "2024-03",
+      "startDate": "2024-08",
+      "endDate": "Present"
+    },
+    {
+      "name": "Efficient Offline Data Generation Suite for LLMs",
+      "summary": "Create a scalable and efficient data generation suite for LLM workflows, now used as the standard for offline data processing at Pinduoduo.",
+      "highlights": [
+        "Designed a scalable, efficient data generation suite for large-scale offline processing with LLM-powered workflows.",
+        "Implemented a modular, asynchronous architecture for parallelized data preprocessing, request handling, and storage.",
+        "Adopted as the standard for offline data generation at Pinduoduo, processing millions of queries weekly across hundreds of millions of products."
+      ],
+      "startDate": "2025-02",
+      "endDate": "Present"
+    },
+    {
+      "name": "Unsupervised Mass Product Property Extraction",
+      "summary": "Developed an unsupervised, config-driven pipeline using LLMs to extract diverse product properties for e-commerce.",
+      "highlights": [
+        "Developed an unsupervised, config-driven pipeline using LLMs to extract diverse product properties.",
+        "Used finite-state machines from templates to guide LLM decoding and ensure valid JSON output.",
+        "Implemented an unsupervised process to clean and filter low-quality or duplicate properties.",
+        "Built a keyword and feature generation process for billions of products.",
+        "Designed a holistic evaluation pipeline for property validation, including keyword and semantic checks."
+      ],
+      "startDate": "2024-02",
       "endDate": "Present"
     },
     {
       "name": "Red-teaming Benchmark for LLM-Integrated Apps",
-      "summary": "Analyze prompt injection attacks, develop compound attack strategies, and propose defense templates to enhance LLM safety through in-context learning",
+      "summary": "Analyzed prompt injection attacks and developed the Raccoon benchmark to evaluate the safety of LLM-integrated applications.",
       "highlights": [
-        "Collect 200+ system prompts and instructions from user created ChatGPT based applications on OpenAI's GPT Store.",
-        "Summarized state-of-the-art prompt injection paradigms into 10+ categories and further constructed compound attacks.",
-        "Derived 20+ prompt templates for in-context defense against prompt injections.",
-        "Built Raccoon benchmark to evaluate safety of LLM-integrated applications across models under complex attack scenarios."
+        "Collected 200+ system prompts from applications on OpenAI's GPT Store.",
+        "Categorized 10+ prompt injection paradigms and constructed compound attacks.",
+        "Created 20+ templates for in-context defense against prompt injections.",
+        "Built the Raccoon benchmark to evaluate application safety against complex prompt injection attacks."
       ],
       "startDate": "2023-09",
       "endDate": "2024-02"
     },
     {
       "name": "DNN Acceleration via Graph Mutation",
-      "summary": "Improve DNN inference efficiency for multi-task systems.",
+      "summary": "Improved DNN inference efficiency for multi-task systems with a customized graph compiler.",
       "highlights": [
-        "Led the design and implementation of a parser that converts PyTorch models to intermediate graph representations.",
-        "Designed a graph compiler that reuses layers and estimates inference time of new models using sampling.",
-        "Designed an algorithm based on simulated annealing to balance exploration and exploitation of graph merging.",
-        "Utilized frameworks like TensorRT & TVM to further optimize model inference time."
+        "Led the design of a parser to convert PyTorch models to an intermediate graph representation.",
+        "Designed a graph compiler to reuse layers and estimate inference time via sampling.",
+        "Designed a simulated annealing algorithm to optimize graph merging.",
+        "Optimized model inference time using TensorRT and TVM."
       ],
       "startDate": "2022-02",
       "endDate": "2022-10"
@@ -83,15 +107,15 @@
     },
     {
       "name": "RL Algorithms with High Safety Guarantees",
-      "summary": "Safe ML algorithms with mathematical guarantees.",
+      "summary": "Developed safe reinforcement learning algorithms with high-confidence policy improvements using the Seldonian Framework.",
       "highlights": [
-        "Designed and developed machine learning algorithms with high safety constraints using <a href='https://seldonian.cs.umass.edu/Tutorials/overview/'>Seldonian Framework</a>.",
-        "Derived concentration inequalities and implemented various Importance Sampling estimators for high confidence policy improvements.",
-        "Developed a library for Seldonian Framework with <tt>Numpy</tt> and <tt>Numba</tt> optimizations.",
-        "<a href='https://github.com/M0gician/lightRaven'>Opensourced on GitHub with full documentation.</a>"
+        "Supervised by Prof. Philip Thomas, I designed and developed machine learning algorithms with high safety constraints using Seldonian Framework.",
+        "Implemented Importance Sampling estimators for high-confidence policy improvements.",
+        "Developed a Seldonian Framework library with NumPy and Numba optimizations.",
+        "Opensourced on GitHub with full documentation."
       ],
-      "startDate": "2021-06",
-      "endDate": "2022-01"
+      "startDate": "2020-09",
+      "endDate": "2021-02"
     }
   ],
   "work": [
@@ -100,12 +124,11 @@
       "position": "NLP Engineer",
       "startDate": "2024-02",
       "endDate": "Present",
-      "summary": "Design production-level LLM application.",
+      "summary": "Lead LLM-integrated applications for e-commerce scenarios.",
       "highlights": [
-        "Implement unsupervised extraction pipeline for mass product properties.",
-        "Construct keyword and feature generation process for billions of products.",
-        "Build end-to-end system for query-product and product-product relevance learning.",
-        "Optimize model inference efficiency via model distillation and quantization."
+        "Lead LLM-integrated applications for e-commerce scenarios.",
+        "Train and optimize models for latency-critical online tasks.",
+        "Design and implement LLM development pipelines to optimize model inference performance."
       ]
     },
     {
@@ -113,7 +136,7 @@
       "position": "Software Engineer",
       "startDate": "2022-07",
       "endDate": "2023-3",
-      "summary": "Develop next-gen Amazon Grocery Automation System.",
+      "summary": "Develop the next-generation Amazon Grocery Automation System.",
       "highlights": [
         "Designed and implemented AWS cloud infrastructure and algorithms to enable ultra fast 1-2 hour grocery delivery to Amazon customers as part of a new automation pilot program.",
         "Led the design of inventory and order language models.",
@@ -168,6 +191,23 @@
       "title": "Best Project and Development Practices",
       "date": "2017-04",
       "awarder": "CSULB BeachHacks"
+    }
+  ],
+  "openSource": [
+    {
+      "name": "SGLang",
+      "summary": "Active contributor: Analyzed DeepSeek V3/R1 inference performance with SGLang optimizations, added support for the Qwen2-57B-A14B model, and improved constrained decoding for Chinese characters.",
+      "url": "https://github.com/sgl-project/sglang"
+    },
+    {
+      "name": "Outlines",
+      "summary": "Resolved an exception in FSM construction caused by UTF-8 characters starting with a null byte (<code>\\x00</code>).",
+      "url": "https://github.com/dottxt-ai/outlines"
+    },
+    {
+      "name": "Numba",
+      "summary": "Contributed to fixing a faulty <code>UnicodeCharSeq</code> implementation in Numba.",
+      "url": "https://github.com/numba/numba"
     }
   ],
   "languages": [

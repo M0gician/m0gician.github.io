@@ -1,0 +1,18 @@
+<ul class="card-text font-weight-light list-group list-group-flush">
+  {% for item in data[1] %}
+    <li class="list-group-item">
+      <div class="row">
+        <div class="col-xs-12 cl-sm-12 col-md-12 mt-2 mt-md-0">
+          <h6 class="title font-weight-bold ml-1 ml-md-4">
+            {% if item.url %}
+              <a href="{{ item.url }}" target="_blank" rel="noopener noreferrer">{{ item.name }}</a>
+            {% else %}
+              {{ item.name }}
+            {% endif %}
+          </h6>
+          <h6 class="ml-1 ml-md-4" style="font-size: 0.95rem; font-style: italic">{{ item.summary }}</h6>
+        </div>
+      </div>
+    </li>
+  {% endfor %}
+</ul>
